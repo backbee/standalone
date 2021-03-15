@@ -1,0 +1,13 @@
+vendor/
+
+composer.lock
+composer.phar
+
+res/repository/Data/
+web/static/back/
+web/css/fonts/backbee/
+web/css/gen.css
+web/js/theme-bottom.min.js
+
+# Ide
+.idea/

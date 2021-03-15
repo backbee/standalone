@@ -1,0 +1,77 @@
+{
+    "name": "backbee/standalone",
+    "description": "Standalone version of BackBee",
+    "keywords": [
+        "CMS",
+        "Content Management",
+        "No backend CMS",
+        "Standalone"
+    ],
+    "type": "project",
+    "license": "GPL-3.0+",
+    "authors": [
+        {
+            "name": "Eric Chau",
+            "email": "eric.chau@lp-digital.fr"
+        },
+        {
+            "name": "Djoudi Bensid",
+            "email": "djoudi.bensid@lp-digital.fr"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@gitlab.com:lp-digital/backbee/core-php.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@gitlab.com:lp-digital/backbee/bundles/cloud-toolbar-bundle.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@gitlab.com:lp-digital/backbee/bundles/sitemap-bundle.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@gitlab.com:lp-digital/backbee/standalone-core.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@gitlab.com:lp-digital/backbee/common-components.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@gitlab.com:lp-digital/backbee/toolbar-dist.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@gitlab.com:lp-digital/backbee/template-common.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@gitlab.com:lp-digital/backbee/bundles/hauth-bundle.git"
+        }
+    ],
+    "require": {
+        "php": ">=7.2",
+        "backbee/core-php": ">=3.0",
+        "backbee/standalone-core": ">=3.0",
+        "backbee/toolbar-dist": ">=3.0",
+        "backbee/template-common": ">=3.0",
+        "webmozart/console": "@beta"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "~3.2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "BackBeePlanet\\Standalone\\": "src/Standalone",
+            "App\\": "src/App"
+        }
+    },
+    "scripts": {
+        "post-install-cmd": "BackBeePlanet\\Standalone\\Composer\\ScriptHandler::moveDistResources",
+        "post-update-cmd": "BackBeePlanet\\Standalone\\Composer\\ScriptHandler::moveDistResources"
+    }
+}

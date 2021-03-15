@@ -1,0 +1,3 @@
+bbapplication.init:
+    listeners:
+        - [ BackBeePlanet\Standalone\EntryPoint, onApplicationInit, -7000 ]

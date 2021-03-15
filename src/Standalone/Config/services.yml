@@ -1,0 +1,15 @@
+parameters:
+    cloud.strictly.default.categories: false
+
+services:
+    elasticsearch.manager:
+        class: BackBeePlanet\Standalone\ElasticsearchManager
+        arguments: [ "@bbapp" ]
+
+    content.category_listener:
+        class: BackBeePlanet\Standalone\ContentCategoryListener
+        arguments:
+            - "%cloud.default.ordered.categories%"
+            - "%cloud.override.default.categories%"
+            - "%cloud.strictly.default.categories%"
+            - "@routing"

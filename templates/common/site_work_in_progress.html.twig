@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+
+    <title>{% block title %}Site unavailable - {{ this.getApplication().getSite().getLabel() }}{% endblock %}</title>
+
+    <link rel="stylesheet" href="{{ this.getCdnUri('/css/gen.css') }}">
+    <link rel="stylesheet" href="{{ this.getCdnUri('/static/css/cover.css') }}">
+    <style>
+        h1 {
+            font-size: 36px;
+            font-weight: 500;
+            margin-bottom: 30px;
+        }
+    </style>
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="site-wrapper">
+    <div class="site-wrapper-inner">
+        <div class="cover-container">
+            <div class="masthead text-center">
+                <nav class="navbar navbar-fixed-top" id="header">
+                    {{ this.render(this.globalContentFactory().getHeaderLogo(), 'logo_header')|raw }}
+                </nav>
+            </div>
+
+            <h1>Activation du Multilangue en cours...</h1>
+            <p><em>Une intervention d'un administrateur système du site est nécessaire.</em></p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

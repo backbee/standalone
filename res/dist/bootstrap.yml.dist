@@ -1,0 +1,4 @@
+debug: false
+container:
+  dump_directory: ~
+  autogenerate: true

@@ -1,0 +1,16 @@
+bundles:
+  toolbar: BackBee\Bundle\CloudToolbarBundle\CloudToolbar
+  core: BackBeeCloud\EntryPoint
+  standalone: BackBeePlanet\Standalone\EntryPoint
+  sitemap: LpDigital\Bundle\SitemapBundle\Sitemap
+
+date:
+  format: d/m/Y à H:i
+  timezone: Europe/Paris
+
+parameters:
+  force_url_extension: false
+
+encoding:
+  locale: en_US.utf8
+

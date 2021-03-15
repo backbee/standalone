@@ -1,0 +1,89 @@
+administrator:
+  description: "The users of this group have all rights on the website and its features."
+  sites:
+    resources: all
+    actions: all
+  layouts:
+    resources: all
+    actions: all
+  workflow:
+    resources: all
+    actions: all
+  mediafolders:
+    resources: all
+    actions: all
+  pages:
+    resources: all
+    actions: all
+  contents:
+    resources: all
+    actions: all
+  bundles:
+    resources: all
+    actions: all
+  users:
+    resources: all
+    actions: all
+  groups:
+    resources: all
+    actions: all
+
+publisher:
+  description: "Edition: Users of this group can create, edit and publish. User Management & Plugins: Restricted to administrators"
+  sites:
+   resources: all
+   actions: [view]
+  layouts:
+    resources: all
+    actions: [view]
+  workflow:
+    resources: all
+    actions: all
+  mediafolders:
+    resources: all
+    actions: all
+  pages:
+    resources: all
+    actions: [view, create, edit, publish]
+  contents:
+    resources: all
+    actions: all
+  bundles:
+    resources: all
+    actions: all
+  users:
+    resources: all
+    actions: [view]
+  groups:
+    resources: all
+    actions: [view]
+
+contributor:
+  description: "Users of this group can only create and edit. Publishing is unauthorized. User Management & Plugins: Restricted to administrators"
+  sites:
+   resources: all
+   actions: [view]
+  layouts:
+    resources: all
+    actions: [view]
+  workflow:
+    resources: all
+    actions: all
+  mediafolders:
+    resources: all
+    actions: all
+  pages:
+    resources: all
+    actions: [view, create, edit]
+  contents:
+    resources: all
+    actions: all
+  bundles:
+    resources: all
+    actions: all
+  users:
+    resources: all
+    actions: [view]
+  groups:
+    resources: all
+    actions: [view]

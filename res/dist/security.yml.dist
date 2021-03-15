@@ -1,0 +1,90 @@
+firewalls:
+    front_area: { pattern: ^/, anonymous: null }
+encoders:
+  BackBee\Security\User:
+    class: Symfony\Component\Security\Core\Encoder\MessageDigestPasswordEncoder
+    arguments:
+      algorithm: sha512
+      encode_as_base64: false
+      iterations: 8000
+sudoers: []
+
+group_types:
+    super_admin:
+        name: super_admin_name
+        read_only: true     # if true, the group cannot be deleted
+        is_opened: false    # if true, the group can accept new users
+    admin:
+        name: admin_name
+        read_only: true
+        is_opened: true
+        features_rights:
+            - SEO_TRACKING_FEATURE
+            - TAG_FEATURE
+            - USER_RIGHT_FEATURE
+            - MULTILANG_FEATURE
+            - CUSTOM_DESIGN_FEATURE
+            - PRIVACY_POLICY_FEATURE
+            - GLOBAL_CONTENT_FEATURE
+        pages_rights:
+            page_types: ['all']
+            categories: ['all']
+            offline_page:
+                - CREATE
+                - EDIT
+                - DELETE
+                - PUBLISH
+                - CREATE_CONTENT
+                - EDIT_CONTENT
+                - DELETE_CONTENT
+            online_page:
+                - CREATE
+                - EDIT
+                - DELETE
+                - PUBLISH
+                - CREATE_CONTENT
+                - EDIT_CONTENT
+                - DELETE_CONTENT
+    publisher:
+        name: publisher_name
+        read_only: true
+        is_opened: true
+        features_rights:
+            - TAG_FEATURE
+        pages_rights:
+            page_types: ['all']
+            categories: ['all']
+            offline_page:
+                - CREATE
+                - EDIT
+                - DELETE
+                - PUBLISH
+                - CREATE_CONTENT
+                - EDIT_CONTENT
+                - DELETE_CONTENT
+            online_page:
+                - CREATE
+                - EDIT
+                - DELETE
+                - PUBLISH
+                - CREATE_CONTENT
+                - EDIT_CONTENT
+                - DELETE_CONTENT
+    contributor:
+        name: contributor_name
+        read_only: true
+        is_opened: true
+        features_rights: []
+        pages_rights:
+            page_types: ['all']
+            categories: ['all']
+            offline_page:
+                - CREATE
+                - EDIT
+                - DELETE
+                - CREATE_CONTENT
+                - EDIT_CONTENT
+                - DELETE_CONTENT
+            online_page: []
+
+default_group_type: admin   # the group type to assign by default to user on migration

@@ -1,0 +1,56 @@
+
+// Elegant icons
+@import '../node_modules/elegant-icons/style';
+
+// **
+// ** User custom fonts
+// **
+@import 'custom_fonts';
+
+
+// Themes
+@import 'common/themes/default';
+
+// **
+// ** User custom theme
+// **
+@import 'custom_theme';
+
+
+// Bootstrap base
+@import '../node_modules/bootstrap/scss/functions';
+@import '../node_modules/bootstrap/scss/variables';
+@import '../node_modules/bootstrap/scss/mixins';
+
+// Base
+@import 'common/base/mixins';
+@import 'common/base/variables';
+@import 'common/base/functions';
+
+// **
+// ** User custom variables
+// **
+@import 'custom_variables';
+
+
+// Bootstrap
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+
+// Components
+@import 'common/components/module';
+
+
+// Layouts
+@import 'common/layouts/header';
+@import 'common/layouts/footer';
+@import 'common/layouts/navigation';
+
+
+// Pages
+@import 'common/pages/article';
+
+// **
+// ** User custom styles
+// **
+@import 'custom_styles';

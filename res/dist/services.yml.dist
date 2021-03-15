@@ -1,0 +1,13 @@
+parameters:
+  bbapp.cache.dir: ~
+  bbapp.log.dir: ~
+  bbapp.data.dir: ~
+  secret_key: ~
+services:
+  twig.extension.text:
+    class: Twig_Extensions_Extension_Text
+    tags:
+      - { name: twig.extension }
+  doctrine.metadata.cache.driver:
+    class: Doctrine\Common\Cache\FilesystemCache
+    arguments: ['%bbapp.cache.dir%/metadata']

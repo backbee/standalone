@@ -1,0 +1,19 @@
+dbal:
+  driver: pdo_mysql
+  host: 127.0.0.1
+  port: 3306
+  dbname: ~
+  user: ~
+  password: ~
+  charset: utf8
+  collation: utf8_general_ci
+  defaultTableOptions:
+    collate: utf8_general_ci
+    engine: InnoDB
+    charset: utf8
+  orm:
+    metadata_cache_driver:
+      type: service
+      id: @doctrine.metadata.cache.driver
+    entity_custom_repository:
+      BackBee\ClassContent\Revision: BackBeeCloud\Entity\RevisionRepository
