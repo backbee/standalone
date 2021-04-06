@@ -1,6 +1,7 @@
-# BackBee - Standalone version 4.0
+# BackBee - Standalone version
 
 ## 1) Requirements
+
 - PHP 7.1 or greater 
 - MySQL 5.6 OR MariaDB 10.1
 - Nginx or Apache with mod_rewrite module 
@@ -65,10 +66,12 @@ Other values can be modified according current project environment/requirements 
 ```shell
 bin/console backbee:install
 ```
+
 5. ##### BO assets installation
 ```shell
 bin/console backbee:ia
 ```
+
 6. ##### Librairies installation for assets compilation
 ```shell
 cd assets
@@ -159,3 +162,8 @@ optimizeimage:
             colsizes: [ 4,3,2,1 ]
 ```
 
+## 5) Apache & Nginx Configuration 
+
+Configuration files for Apache vhost or Nginx server can be found in:
+- **res/dist/apache.conf.dist** for Apache
+- **res/dist/nginx.conf.dist** for Nginx
