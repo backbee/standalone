@@ -1,6 +1,86 @@
 # BackBee - Standalone version
 
-## 1) Install project
+## 1) Requirements
+- PHP 7.1 or greater 
+- MySQL 5.6 OR MariaDB 10.1
+- Nginx or Apache with mod_rewrite module 
+- HTTPS support
+- Elasticsearch 7.5
+- Redis 6.0 or greater
+- ImageMagick 6.9 or greater (Images optimization)
+- npm 7 or greater (Assets compilation)
+
+## 2) Preparation
+
+#### Install libraries for image optimizer:
+
+RPM like flavor (use yum or dnf depending on your environement):
+```shell
+yum install -y ImageMagick
+```
+Debian like flavor:
+```shell
+apt-get install -y imagemagick
+```
+
+#### Install librairies for assets compilation
+
+Note: setup_current.x refers to node current active release, can be modified (ex: https://deb.nodesource.com/setup_11.x for release 11.x) according your requirements.
+
+RPM like flavor (yum or dnf depending on your environement):
+```shell
+curl -sL https://rpm.nodesource.com/setup_current.x | sudo -E bash - & sudo yum install -y nodejs
+```
+Debian like flavor:
+```shell
+curl -sL https://deb.nodesource.com/setup_current.x | sudo -E bash - && sudo apt-get install -y nodejs
+```
+
+## 3) Project installation
+
+1. ##### Backbee standalone repository clonage
+```shell
+git clone <standalone_repositorie>
+```
+
+2. ##### Dependencies installation
+```shell
+composer up
+```
+
+3. ##### Settings
+Edit the res/repository/Config/global_settings.yml file and set the correct values for project. The main value to set are :
+```yaml
+        - appname
+        - database.host
+        - database.dbname
+        - database.user
+        - database.password
+        - elasticsearch.host (including port)
+        - redis.host
+```
+Other values can be modified according current project environment/requirements (see below part 4 for setup & configuration details)
+
+4. ##### Site installation
+```shell
+bin/console backbee:install
+```
+5. ##### BO assets installation
+```shell
+bin/console backbee:ia
+```
+6. ##### Librairies installation for assets compilation
+```shell
+cd assets
+npm install
+```
+
+7. ##### Assets compilation (must be done once and then every time assets are modified or updated in the assets folder)
+```shell
+gulp
+```
+
+## 4) Configuration
 
 Place your project PHP code under `App\` namespace (`src/App/`).
 
@@ -79,17 +159,3 @@ optimizeimage:
             colsizes: [ 4,3,2,1 ]
 ```
 
-## 2) Install the libraries for the image optimizer:
-
-**Fedora:**
-```yaml
-yum install ImageMagick -y
-yum -y install libwebp-devel
-yum install libwebp-tools
-```
-**Ubuntu:**
-```yaml
-apt-get install imagemagick
-apt-get install libwebp-dev
-apt-get install webp
-```

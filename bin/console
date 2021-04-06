@@ -1,6 +1,8 @@
 #!/usr/bin/env php
 <?php
 
+use BackBee\Console\BackBeeConsole;
+
 ini_set('memory_limit', '1024M');
 
 /* Hack for php v5.6.* prior than php v5.6.6 */
@@ -10,8 +12,13 @@ if (!defined('JSON_PRESERVE_ZERO_FRACTION')) {
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use BackBeePlanet\Standalone\CommandLineConfig;
-use Webmozart\Console\ConsoleApplication;
+$console = new BackBeeConsole();
 
-$cli = new ConsoleApplication(new CommandLineConfig(realpath(__DIR__ . '/../')));
-$cli->run();
+try {
+    $console->initApplication();
+    $console->run();
+} catch (Exception $exception) {
+    $console->getApplication()->getLogging()->error(
+        sprintf('%s : %s : %s', __CLASS__, __FUNCTION__, $exception->getMessage())
+    );
+}

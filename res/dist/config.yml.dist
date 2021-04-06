@@ -1,8 +1,6 @@
 bundles:
-  toolbar: BackBee\Bundle\CloudToolbarBundle\CloudToolbar
-  core: BackBeeCloud\EntryPoint
+  core: BackBee\EntryPoint
   standalone: BackBeePlanet\Standalone\EntryPoint
-  sitemap: LpDigital\Bundle\SitemapBundle\Sitemap
 
 date:
   format: d/m/Y à H:i
