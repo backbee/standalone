@@ -5,56 +5,56 @@
         "CMS",
         "Content Management",
         "BackBee",
-        "Standalone" 
+        "Standalone"
     ],
     "type": "project",
     "license": "GPL-3.0+",
     "authors": [
         {
             "name": "Djoudi Bensid",
-            "email": "djoudi.bensid@lp-digital.fr" 
+            "email": "djoudi.bensid@lp-digital.fr"
         },
         {
             "name": "Cédric Bouillot",
-            "email": "cedric.bouillot@lp-digital.fr" 
+            "email": "cedric.bouillot@lp-digital.fr"
         }
     ],
     "repositories": [
         {
             "type": "vcs",
-            "url": "git@gitlab.com:lp-digital/backbee/backbee-php.git" 
+            "url": "git@gitlab.com:lp-digital/backbee/backbee-php.git"
         },
         {
             "type": "vcs",
-            "url": "git@gitlab.com:lp-digital/backbee/core-php.git" 
+            "url": "git@gitlab.com:lp-digital/backbee/core-php.git"
         },
         {
             "type": "vcs",
-            "url": "git@gitlab.com:lp-digital/backbee/doctrine/orm.git" 
+            "url": "git@gitlab.com:lp-digital/backbee/doctrine/orm.git"
         },
         {
             "type": "vcs",
-            "url": "git@gitlab.com:lp-digital/backbee/toolbar-dist.git" 
+            "url": "git@gitlab.com:lp-digital/backbee/toolbar-dist.git"
         }
     ],
     "require": {
         "php": ">=7.1",
         "backbee/backbee-php": "^1.4",
-        "backbee/core-php": "dev-issue/38",
+        "backbee/core-php": ">=4.0",
         "doctrine/orm": "v2.4.8.1",
-        "backbee/toolbar-dist": "dev-master" 
+        "backbee/toolbar-dist": ">=4.0"
     },
     "require-dev": {
-        "symfony/var-dumper": "~3.2.0" 
+        "symfony/var-dumper": "~3.2.0"
     },
     "autoload": {
         "psr-4": {
             "BackBeePlanet\\Standalone\\": "src/Standalone",
-            "App\\": "src/App" 
+            "App\\": "src/App"
         }
     },
     "scripts": {
         "post-install-cmd": "BackBeePlanet\\Standalone\\Composer\\ScriptHandler::moveDistResources",
-        "post-update-cmd": "BackBeePlanet\\Standalone\\Composer\\ScriptHandler::moveDistResources" 
+        "post-update-cmd": "BackBeePlanet\\Standalone\\Composer\\ScriptHandler::moveDistResources"
     }
 }

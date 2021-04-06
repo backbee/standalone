@@ -1,0 +1,63 @@
+server {
+    listen 80 default_server;
+
+    server_name standalone.localhost;
+    root /app/web;
+    index index.php;
+
+    client_max_body_size 50M;
+    error_log /app/log/nginx-error.log;
+
+    gzip on;
+    gzip_disable msie6;
+    gzip_vary on;
+    gzip_proxied any;
+    gzip_comp_level 6;
+    gzip_http_version 1.1;
+    gzip_min_length 256;
+    gzip_types
+        text/plain
+        text/css
+        application/json
+        application/x-javascript
+        text/xml
+        application/xml
+        application/xml+rss
+        text/javascript
+        application/javascript
+        application/vnd.ms-fontobject
+        application/x-font-ttf
+        font/opentype
+        image/svg+xml
+        image/x-icon;
+
+    location ~ /(static|media|img)/(.*) {
+        expires 10d;
+        add_header Pragma public;
+        add_header Cache-Control public;
+        alias /app/;
+        try_files /web/img/$2 /web/static/$2 /res/repository/Data/Storage/$2 /res/repository/Data/Media/$2 404;
+    }
+
+    location ~ /css/color_panel_(.*).css {
+        alias /app/;
+        try_files /public/css/color_panel_$1.css @rewriteapp;
+    }
+
+    location ~* \.(?:ico|css|js|gif|jpe?g|png|JPG|woff)$ {
+        expires 10d;
+        add_header Pragma public;
+        add_header Cache-Control public;
+    }
+
+    location @rewriteapp {
+        rewrite ^(.*)$ /index.php last;
+    }
+
+    location ~ \.php$ {
+        fastcgi_pass unix:/var/run/php-fpm/php-fpm.sock;
+        include fastcgi_params;
+	    fastcgi_param HTTPS on;
+        fastcgi_param  SCRIPT_FILENAME $document_root$fastcgi_script_name;
+    }
+}

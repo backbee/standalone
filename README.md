@@ -1,4 +1,4 @@
-# BackBee - Standalone version
+# BackBee - Standalone version 4.0
 
 ## 1) Requirements
 - PHP 7.1 or greater 
