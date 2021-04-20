@@ -3,7 +3,7 @@ parameters:
 
 services:
     elasticsearch.manager:
-        class: BackBeePlanet\Standalone\ElasticsearchManager
+        class: BackBeeCloud\Elasticsearch\ElasticsearchManager
         arguments: [ "@bbapp" ]
 
     content.category_listener:

@@ -1,4 +1,4 @@
 debug: false
 container:
-  dump_directory: ~
-  autogenerate: true
+    dump_directory: ~
+    autogenerate: true

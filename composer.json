@@ -54,7 +54,13 @@
         }
     },
     "scripts": {
-        "post-install-cmd": "BackBeePlanet\\Standalone\\Composer\\ScriptHandler::moveDistResources",
-        "post-update-cmd": "BackBeePlanet\\Standalone\\Composer\\ScriptHandler::moveDistResources"
+        "post-install-cmd": [
+            "BackBee\\Installer\\Composer\\ScriptHandler::moveDistResources",
+            "BackBee\\Installer\\Composer\\ScriptHandler::moveConfigDistResources"
+        ],
+        "post-update-cmd": [
+            "BackBee\\Installer\\Composer\\ScriptHandler::moveDistResources",
+            "BackBee\\Installer\\Composer\\ScriptHandler::moveConfigDistResources"
+        ]
     }
 }

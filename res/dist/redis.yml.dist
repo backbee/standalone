@@ -1,0 +1,7 @@
+scheme: tcp
+host: localhost
+port: 6379
+password: ~
+disable_page_cache: true
+page_cache_db: 8
+jobs_db: 10
