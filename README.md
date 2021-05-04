@@ -1,9 +1,3 @@
-<p align="center">
-    <a href="https://backbee.com" target="_blank">
-        <img src="https://backbee.com/img/222/logo-backbee-planet-full.png">
-    </a>
-</p>
-
 # Standalone version
 
 ## 1) Requirements
