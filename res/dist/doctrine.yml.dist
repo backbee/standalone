@@ -15,5 +15,3 @@ dbal:
         metadata_cache_driver:
             type: service
             id: @doctrine.metadata.cache.driver
-        entity_custom_repository:
-            BackBee\ClassContent\Revision: BackBeeCloud\Entity\RevisionRepository

@@ -35,6 +35,4 @@ languages:
     nl: Nederlands
     pt: Português
     ru: русский
-    ar: العربية
-
-whitelist: []
+    ar: عرب
