@@ -22,9 +22,9 @@
     ],
     "require": {
         "php": ">=7.1",
-        "backbee/legacy": ">=4.0",
-        "backbee/core-php": ">=4.0",
-        "backbee/toolbar-dist": ">=4.0"
+        "backbee/legacy": "~4.0",
+        "backbee/core-php": "~4.0",
+        "backbee/toolbar-dist": "~4.0"
     },
     "autoload": {
         "psr-4": {
