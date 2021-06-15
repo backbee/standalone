@@ -19,24 +19,23 @@
  * along with BackBee Standalone. If not, see <https://www.gnu.org/licenses/>.
  */
 
-namespace BackBeePlanet\Standalone;
+namespace App\Helper;
 
+use BackBeePlanet\Standalone\AbstractStandaloneHelper;
 use function dirname;
 
 /**
  * Class StandaloneHelper
  *
- * @package BackBeePlanet\Standalone
- *
- * @author Eric Chau <eric.chau@lp-digital.fr>
+ * @package App
  */
 class StandaloneHelper extends AbstractStandaloneHelper
 {
     /**
      * {@inheritdoc}
      */
-    public static function rootDir()
+    public static function rootDir(): string
     {
-        return dirname(__DIR__, 2) . '/';
+        return dirname(__DIR__, 3) . '/';
     }
 }

@@ -19,25 +19,22 @@
  * along with BackBee Standalone. If not, see <https://www.gnu.org/licenses/>.
  */
 
-namespace BackBeePlanet\Standalone;
+namespace App;
 
+use BackBeePlanet\Standalone\AbstractApplication;
 use function dirname;
 
 /**
  * Class Application
  *
- * @package BackBeePlanet\Standalone
- *
- * @author Eric Chau <eric.chau@lp-digital.fr>
+ * @package App
  */
 class Application extends AbstractApplication
 {
     /**
-     * Get base directory.
-     *
      * @return string
      */
-    protected function getBaseDirectory()
+    protected function getBaseDirectory(): string
     {
         return dirname(__DIR__, 2) . '/';
     }

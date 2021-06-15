@@ -1,6 +1,6 @@
 # Changelog for 4.1.2
 
-*Autor : Djoudi Bensid <<djoudi.bensid@lp-digital.fr>>*
+*Author : Djoudi Bensid - <djoudi.bensid@lp-digital.fr>*
 
 This changelog references the relevant changes (bug and additions, modifications and deletions) done in 4.1.2 minor versions.
 

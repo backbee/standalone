@@ -1,8 +1,8 @@
-# Changelog for 4.1
+# Changelog for 4.1.0
 
-*Autor : Djoudi Bensid <<djoudi.bensid@lp-digital.fr>>*
+*Author : Djoudi Bensid - <djoudi.bensid@lp-digital.fr>*
 
-This changelog references the relevant changes (bug and additions, modifications and deletions) done in 4.1 minor versions.
+This changelog references the relevant changes (bug and additions, modifications and deletions) done in 4.1.0 minor versions.
 
 ### Added
 - [Application] - Adding **getAppParameter** method to retrieve values defined in **app** key into *res/repository/Config/config.yml*

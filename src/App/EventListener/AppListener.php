@@ -19,28 +19,26 @@
  * along with BackBee Standalone. If not, see <https://www.gnu.org/licenses/>.
  */
 
-namespace BackBeePlanet\Standalone;
+namespace App\EventListener;
 
-use BackBee\Bundle\AbstractBundle;
 use BackBee\Event\Event;
 
 /**
- * Class EntryPoint
+ * Class AppListener
  *
- * @package BackBeePlanet\Standalone
- *
- * @author Eric Chau <eric.chau@lp-digital.fr>
+ * @package App\EventListener
  */
-class EntryPoint extends AbstractBundle
+class AppListener
 {
     /**
-     * Called on "bbapplication.init" event to add standalone resources folders.
+     * On application init.
      *
      * @param Event $event
      */
     public static function onApplicationInit(Event $event)
     {
         $app = $event->getTarget();
+
         if ($app->isRestored()) {
             return;
         }
@@ -48,21 +46,5 @@ class EntryPoint extends AbstractBundle
         $app->getRenderer()->addLayoutDir($app->getBaseDir() . DIRECTORY_SEPARATOR . 'layouts');
         $app->getRenderer()->addScriptDir($app->getBaseDir() . DIRECTORY_SEPARATOR . 'templates');
         $app->unshiftClassContentDir($app->getBaseDir() . DIRECTORY_SEPARATOR . 'classcontents');
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function start()
-    {
-        return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function stop()
-    {
-        return $this;
     }
 }

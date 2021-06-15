@@ -1,38 +1,35 @@
-app:
-    name: ~
+parameters:
+    app_name: ~
+    container:
+        dump_directory: ~
+        autogenerate: true
+    debug: false
     dev_mode: false
     privacy_policy: false
     knowledge_graph: true
-
-bundles:
-    core: BackBee\EntryPoint
-    standalone: BackBeePlanet\Standalone\EntryPoint
-
-date:
-    format: d/m/Y à H:i
-    timezone: Europe/Paris
-
-parameters:
+    bundles:
+        core: BackBee\EntryPoint
+    date:
+        format: d/m/Y à H:i
+        timezone: Europe/Paris
     force_url_extension: false
-
-encoding:
-    locale: en_US.utf8
-
-cdn:
-    app_js_url: /static/back/js/app.js
-    app_css_url: /static/back/css/app.css
-    image_domain: null
-    static_domain: null
-    app_rte_url: 'https://cdn.ckeditor.com/4.16.0/full-all/ckeditor.js'
-
-languages:
-    cn: 中文
-    de: Deutsch
-    en: English
-    es: Español
-    fr: Français
-    it: Italiano
-    nl: Nederlands
-    pt: Português
-    ru: русский
-    ar: عرب
+    encoding:
+        locale: en_US.utf8
+    cdn:
+        app_js_url: /static/back/js/app.js
+        app_css_url: /static/back/css/app.css
+        image_domain: null
+        static_domain: null
+        app_rte_url: 'https://cdn.ckeditor.com/4.16.0/full-all/ckeditor.js'
+    languages:
+        cn: 中文
+        de: Deutsch
+        en: English
+        es: Español
+        fr: Français
+        it: Italiano
+        nl: Nederlands
+        pt: Português
+        ru: русский
+        ar: العربية
+    whitelist: []
