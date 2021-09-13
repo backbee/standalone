@@ -6,7 +6,7 @@
 - MySQL 5.6 OR MariaDB 10.1
 - Nginx or Apache with mod_rewrite module 
 - HTTPS support
-- Elasticsearch 7.5
+- Elasticsearch 7.14
 - Redis 6.0 or greater
 - ImageMagick 6.9 or greater (Images optimization)
 - npm 7 or greater (Assets compilation)
