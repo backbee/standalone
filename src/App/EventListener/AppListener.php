@@ -43,6 +43,7 @@ class AppListener
             return;
         }
 
+        $app->getRenderer()->addHelperDir($app->getBaseDir() . DIRECTORY_SEPARATOR . 'helpers');
         $app->getRenderer()->addLayoutDir($app->getBaseDir() . DIRECTORY_SEPARATOR . 'layouts');
         $app->getRenderer()->addScriptDir($app->getBaseDir() . DIRECTORY_SEPARATOR . 'templates');
         $app->unshiftClassContentDir($app->getBaseDir() . DIRECTORY_SEPARATOR . 'classcontents');
