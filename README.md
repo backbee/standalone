@@ -9,7 +9,7 @@
 - Elasticsearch 7.14
 - Redis 6.0 or greater
 - ImageMagick 6.9 or greater (Images optimization)
-- npm 7 or greater (Assets compilation)
+- npm 8 or greater (Assets compilation)
 
 ## 2) Preparation
 
@@ -26,7 +26,7 @@ apt-get install -y imagemagick
 
 #### Install libraries for assets compilation
 
-Note: setup_current.x refers to node current active release, can be modified (ex: https://deb.nodesource.com/setup_11.x for release 11.x) according your requirements.
+Note: setup_current.x refers to node current active release, can be modified (ex: https://deb.nodesource.com/setup_16.x for release 16.x) according your requirements.
 
 RPM like flavor (yum or dnf depending on your environment):
 ```shell
