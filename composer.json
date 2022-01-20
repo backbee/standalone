@@ -13,11 +13,11 @@
     "authors": [
         {
             "name": "Djoudi Bensid",
-            "email": "djoudi.bensid@lp-digital.fr"
+            "email": "d.bensid@obione.eu"
         },
         {
             "name": "Cédric Bouillot",
-            "email": "cedric.bouillot@lp-digital.fr"
+            "email": "c.bouillot@obione.eu"
         }
     ],
     "autoload": {
@@ -26,7 +26,9 @@
         }
     },
     "autoload-dev": {
-        "files": [ "vendor/symfony/symfony/src/Symfony/Component/VarDumper/Resources/functions/dump.php" ]
+        "files": [
+            "vendor/symfony/symfony/src/Symfony/Component/VarDumper/Resources/functions/dump.php"
+        ]
     },
     "require": {
         "php": ">=7.1",

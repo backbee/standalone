@@ -39,9 +39,9 @@ curl -sL https://deb.nodesource.com/setup_current.x | sudo -E bash - && sudo apt
 
 ## 3) Project installation
 
-1. ##### Backbee standalone repository clonage
+1. ##### Backbee standalone repository clone
 ```shell
-git clone <standalone_repositorie>
+git clone "standalone_repositories"
 ```
 
 2. ##### Dependencies installation
@@ -76,9 +76,10 @@ Place your project PHP code under `App\` namespace (`src/App/`).
 
 If you want to add:
 
-- Templates, do it under `templates/`
-- ClassContent, do it under `classcontents/`
-- Layout templates files, do it under `layouts/`
+- Templates, do it under `res/templates/`
+- ClassContent, do it under `res/classcontents/`
+- Layout templates files, do it under `res/layouts/`
+- Helper, do it under `res/helpers`
 
 ## 5) Apache & Nginx Configuration 
 

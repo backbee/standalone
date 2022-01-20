@@ -1,7 +1,7 @@
 <?php
 
 /*
- * Copyright (c) 2011-2021 Lp Digital
+ * Copyright (c) 2011-2022 ObiOne
  *
  * This file is part of BackBee Standalone.
  *
@@ -35,17 +35,7 @@ class AppListener
      *
      * @param Event $event
      */
-    public static function onApplicationInit(Event $event)
+    public static function onApplicationInit(Event $event): void
     {
-        $app = $event->getTarget();
-
-        if ($app->isRestored()) {
-            return;
-        }
-
-        $app->getRenderer()->addHelperDir($app->getBaseDir() . DIRECTORY_SEPARATOR . 'helpers');
-        $app->getRenderer()->addLayoutDir($app->getBaseDir() . DIRECTORY_SEPARATOR . 'layouts');
-        $app->getRenderer()->addScriptDir($app->getBaseDir() . DIRECTORY_SEPARATOR . 'templates');
-        $app->unshiftClassContentDir($app->getBaseDir() . DIRECTORY_SEPARATOR . 'classcontents');
     }
 }

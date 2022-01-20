@@ -1,7 +1,7 @@
 <?php
 
 /*
- * Copyright (c) 2011-2021 Lp Digital
+ * Copyright (c) 2011-2022 ObiOne
  *
  * This file is part of BackBee Standalone.
  *
