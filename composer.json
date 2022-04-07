@@ -14,10 +14,6 @@
         {
             "name": "Djoudi Bensid",
             "email": "d.bensid@obione.eu"
-        },
-        {
-            "name": "Cédric Bouillot",
-            "email": "c.bouillot@obione.eu"
         }
     ],
     "autoload": {
@@ -31,10 +27,10 @@
         ]
     },
     "require": {
-        "php": ">=7.1",
-        "backbee/legacy": "~4.0",
-        "backbee/core-php": "~4.0",
-        "backbee/toolbar-dist": "~4.0"
+        "php": ">=7.3",
+        "backbee/legacy": "4.2.6",
+        "backbee/core-php": "4.2.6",
+        "backbee/toolbar-dist": "4.2.6"
     },
     "scripts": {
         "backbee-scripts": [

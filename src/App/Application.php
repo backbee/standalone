@@ -1,7 +1,7 @@
 <?php
 
 /*
- * Copyright (c) 2011-2022 ObiOne
+ * Copyright (c) 2022 Obione
  *
  * This file is part of BackBee Standalone.
  *

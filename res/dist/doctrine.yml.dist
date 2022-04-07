@@ -5,12 +5,12 @@ dbal:
     dbname: ~
     user: ~
     password: ~
-    charset: utf8
-    collation: utf8_general_ci
+    charset: utf8mb4
+    collation: utf8mb4_unicode_ci
     defaultTableOptions:
-        collate: utf8_general_ci
+        collate: utf8mb4_unicode_ci
         engine: InnoDB
-        charset: utf8
+        charset: utf8mb4
     orm:
         metadata_cache_driver:
             type: service

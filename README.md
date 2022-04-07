@@ -2,8 +2,8 @@
 
 ## 1) Requirements
 
-- PHP 7.1 or greater 
-- MySQL 5.6 OR MariaDB 10.1
+- PHP 7.3 or greater 
+- MySQL 5.7 OR MariaDB 10.1
 - Nginx or Apache with mod_rewrite module 
 - HTTPS support
 - Elasticsearch 7.14

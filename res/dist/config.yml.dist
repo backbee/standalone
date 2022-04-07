@@ -6,7 +6,7 @@ parameters:
     debug: false
     dev_mode: false
     privacy_policy: false
-    knowledge_graph: true
+    multi_language: true
     bundles:
         core: BackBee\EntryPoint
     date:
@@ -20,7 +20,7 @@ parameters:
         app_css_url: /static/back/css/app.css
         image_domain: null
         static_domain: null
-        app_rte_url: 'https://cdn.ckeditor.com/4.16.0/full-all/ckeditor.js'
+        app_rte_url: 'https://cdn.ckeditor.com/4.17.2/full/ckeditor.js'
     languages:
         cn: 中文
         de: Deutsch
@@ -33,3 +33,8 @@ parameters:
         ru: русский
         ar: العربية
     whitelist: []
+    about:
+        author: 'Obione'
+        author_link: 'https://www.onebase.fr'
+        licence: 'GPL-3.0+'
+        licence_link: 'https://www.gnu.org/licenses/gpl-3.0.txt'
