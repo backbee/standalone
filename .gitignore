@@ -1,13 +1,15 @@
-vendor/
-
-composer.lock
-composer.phar
-
+# App
 res/repository/Data/
 web/static/back/
 web/css/fonts/backbee/
 web/css/gen.css
 web/js/theme-bottom.min.js
 
+# Composer
+vendor/
+composer.lock
+composer.phar
+
 # Ide
 .idea/
+.vscode/

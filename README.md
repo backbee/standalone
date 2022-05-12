@@ -2,7 +2,7 @@
 
 ## 1) Requirements
 
-- PHP 7.3 or greater 
+- PHP 7.4
 - MySQL 5.7 OR MariaDB 10.1
 - Nginx or Apache with mod_rewrite module 
 - HTTPS support
